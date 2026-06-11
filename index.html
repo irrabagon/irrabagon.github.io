@@ -1,32 +1,624 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Саша Попадьин — дизайн</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: #161616;
-      color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .wrap { text-align: center; padding: 24px; }
-    h1 { font-size: clamp(32px, 6vw, 72px); font-weight: 800; letter-spacing: -0.02em; }
-    p { color: #9E9E9E; margin-top: 16px; font-size: 18px; }
-    .accent { color: #011AFF; }
-    a { color: #fff; border-bottom: 2px solid #011AFF; text-decoration: none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Александр Попадьин — дизайн-лид. Айдентика, продукты, ИИ</title>
+<meta name="description" content="Дизайн-лид Александр Попадьин: продуктовый дизайн, айдентика, дизайн-системы и ИИ-продукты. 28 лет в дизайне, 100+ завершённых проектов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F2F2;
+  --ink:#333333;
+  --ink-soft:#555555;
+  --grey:#737373;
+  --accent:#011AFF;
+  --link:#2638F0;
+  --card:#FFFFFF;
+  --dark:#252525;
+  --dark-card:#1C1C1C;
+  --radius:24px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Onest',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:16px;
+  line-height:1.5;
+}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.container{max-width:1248px;margin:0 auto;padding:0 24px}
+
+/* Header */
+.header{padding:28px 0}
+.header .container{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.logo .role{font-size:14px;color:var(--grey)}
+.logo .name{font-size:16px;font-weight:700;color:#1A1A1A}
+.nav{display:flex;gap:36px;font-size:16px}
+.nav a{color:#1A1A1A;transition:color .2s}
+.nav a:hover,.nav a.active{color:var(--accent)}
+
+/* Hero */
+.hero .container{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 431px;
+  align-items:end;
+  column-gap:14px;
+}
+.hero-text{padding:120px 0 190px;min-width:0}
+.hero-text h1{
+  font-size:42px;
+  font-weight:800;
+  line-height:1.25;
+  letter-spacing:-0.015em;
+  color:#3A3A3A;
+  white-space:nowrap;
+}
+.hero-text h1 .accent{color:var(--accent)}
+.hero-avatar{
+  display:block;
+  width:100%;
+  max-width:431px;
+  height:auto;
+  margin:0 0 -2px auto;
+  justify-self:end;
+}
+@media (max-width:1250px) and (min-width:901px){
+  .hero .container{grid-template-columns:minmax(0,1fr) 35vw}
+  .hero-text h1{font-size:3.35vw}
+}
+
+/* Works */
+.works{padding-top:0}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  overflow:hidden;
+  min-width:0;
+  max-width:100%;
+  display:flex;
+  flex-direction:column;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+.card-body{padding:48px 48px 0}
+.card-body h3{font-size:28px;font-weight:800;color:#1A1A1A;letter-spacing:-0.01em;line-height:1.36}
+.card-body p{margin-top:12px;font-size:16px;line-height:23px;color:var(--ink-soft);max-width:460px}
+.card-link{display:inline-block;margin:20px 0 41px;font-weight:600;color:var(--link)}
+.card-link .arr{display:inline-block;transition:transform .2s}
+.card:hover .card-link .arr{transform:translateX(4px)}
+.card-cover{margin:auto 0 0 14.966%;border-radius:12px 0 0 0;box-shadow:0 12px 32px rgba(0,0,0,.18)}
+.card-cover img{width:100%;max-width:100%;height:auto;border-radius:inherit}
+
+/* About */
+.about{padding:140px 0 150px}
+.about h2{font-size:clamp(34px,3.5vw,44px);font-weight:800;color:#3A3A3A;letter-spacing:-0.01em}
+.about-cols{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:72px}
+.about-text p{font-size:19px;line-height:1.65;color:#3A3A3A;max-width:560px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.chip{
+  background:#FFFFFF;
+  border-radius:999px;
+  padding:10px 20px;
+  font-size:15px;
+  color:#3A3A3A;
+}
+.timeline{display:flex;flex-direction:column}
+.tl-row{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:24px;
+  padding:18px 0;
+  border-bottom:1px solid #E2E2E2;
+  align-items:baseline;
+}
+.tl-row:first-child{padding-top:0}
+.tl-years{font-size:14px;font-weight:700;color:var(--accent)}
+.tl-place{font-size:17px;font-weight:700;color:#1A1A1A}
+.tl-role{font-size:14px;color:var(--grey);margin-top:2px}
+
+/* Photos */
+.photos{background:#FFFFFF;padding:100px 0 90px}
+.photos-head{display:flex;justify-content:space-between;align-items:center}
+.photos-head h2{font-size:clamp(28px,3vw,36px);font-weight:800;color:#3A3A3A}
+.btn-pill{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  padding:13px 22px;
+  border-radius:999px;
+  transition:opacity .2s;
+}
+.btn-pill:hover{opacity:.85}
+.ph-strip-wrap{margin-top:48px;overflow:hidden}
+.ph-strip{
+  display:flex;
+  gap:24px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+.ph-strip::-webkit-scrollbar{display:none}
+.ph-strip img{
+  flex:0 0 auto;
+  width:286px;
+  height:360px;
+  object-fit:cover;
+  border-radius:16px;
+}
+.ph-nav{display:flex;gap:12px;margin-top:36px}
+.ph-nav button{
+  width:44px;height:44px;
+  border-radius:50%;
+  border:1px solid #D9D9D9;
+  background:#fff;
+  color:#1A1A1A;
+  font-size:16px;
+  cursor:pointer;
+  transition:background .2s,border-color .2s;
+}
+.ph-nav button:hover{background:#F2F2F2;border-color:#bbb}
+
+/* Dark section */
+.dark{background:var(--dark);color:#fff;padding:110px 0 0}
+.recognition{text-align:center}
+.recognition h2{font-size:clamp(34px,3.5vw,44px);font-weight:800}
+.recognition .sub{margin-top:20px;color:#A8A8A8;font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:56px auto 0;max-width:880px}
+.stat{
+  background:var(--dark-card);
+  border-radius:20px;
+  padding:38px 20px;
+}
+.stat .num{font-size:30px;font-weight:800;color:#2E47FF}
+.stat .lbl{margin-top:8px;color:#A8A8A8;font-size:14px}
+.dark hr{border:none;border-top:1px solid rgba(255,255,255,.1);margin:110px 0 0}
+
+/* Contact */
+.contact{text-align:center;padding:120px 0 0}
+.contact h2{font-size:clamp(40px,5.3vw,64px);font-weight:800;letter-spacing:-0.01em}
+.contact .sub{margin:32px auto 0;max-width:520px;color:#A8A8A8;font-size:17px;line-height:1.6}
+.contact .btn-tg{
+  display:inline-block;
+  margin-top:44px;
+  background:#1525F5;
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  padding:18px 36px;
+  border-radius:999px;
+  transition:background .2s;
+}
+.contact .btn-tg:hover{background:#011AFF}
+.contact-links{display:flex;justify-content:center;gap:40px;margin-top:56px;color:#C4C4C4;font-size:15px}
+.contact-links a:hover{color:#fff}
+
+/* Footer */
+.footer{padding:90px 0 40px}
+.footer .container{display:flex;justify-content:space-between;color:#6E6E6E;font-size:14px}
+
+/* Burger + mobile menu (скрыты на десктопе) */
+.burger{display:none;flex-direction:column;justify-content:space-between;width:22px;height:16px;background:none;border:none;cursor:pointer;padding:0}
+.burger span{display:block;height:2px;background:#1A1A1A;border-radius:1px}
+.m-only{display:none}
+.mmenu{position:fixed;inset:0;background:var(--bg);z-index:50;display:none;flex-direction:column;overflow-y:auto}
+.mmenu.open{display:flex}
+body.menu-open{overflow:hidden}
+.mmenu-head{display:flex;justify-content:space-between;align-items:center;padding-top:14px;width:100%}
+.mclose{background:none;border:none;font-size:24px;line-height:1;color:#1A1A1A;cursor:pointer;padding:4px}
+.mmenu-nav{display:flex;flex-direction:column;gap:30px;padding:44px 20px 0}
+.mmenu-nav a{font-size:36px;font-weight:800;color:#1A1A1A;line-height:1.15}
+.mmenu-nav a.active{color:var(--accent)}
+.mmenu-nav a .num{font-size:13px;font-weight:600;color:var(--grey)}
+.mmenu-foot{margin-top:auto;padding:40px 20px 28px}
+.mmenu-foot .btn-tg{display:inline-block;background:#1525F5;color:#fff;font-size:15px;font-weight:700;padding:14px 28px;border-radius:999px}
+.mmenu-links{display:flex;gap:28px;margin-top:28px;color:#555;font-size:14px}
+.mmenu-city{margin-top:24px;color:#9A9A9A;font-size:13px}
+
+@media (max-width:900px){
+  .container{padding:0 20px}
+  /* header */
+  .header{padding:14px 0 10px}
+  .nav{display:none}
+  .burger{display:flex}
+  /* hero */
+  .hero .container{grid-template-columns:minmax(0,1fr)}
+  .hero-text{padding:32px 0 0}
+  .hero-text h1{font-size:29px;line-height:38px;white-space:normal;letter-spacing:-0.02em}
+  .hero-avatar{width:195px;max-width:60%;justify-self:center;margin:8px 0 -2px}
+  /* cards */
+  .grid{grid-template-columns:minmax(0,1fr);gap:16px}
+  .card-body{padding:24px 24px 0}
+  .card-body h3{font-size:22px;line-height:1.23}
+  .card-body p{margin-top:8px;font-size:14px;line-height:19px}
+  .card-link{font-size:15px;line-height:1.2;margin:8px 0 0}
+  .card-cover{margin:22px 24px 20px;border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.18)}
+  /* about */
+  .about{padding:48px 0 16px}
+  .about h2{font-size:34px;line-height:1.2}
+  .about-cols{grid-template-columns:1fr;gap:16px;margin-top:16px}
+  .about-text p{font-size:17px;line-height:1.3}
+  .chips{margin-top:16px;gap:8px}
+  .chip{padding:7px 14px;font-size:13px}
+  .tl-row{grid-template-columns:1fr;gap:2px;padding:12px 0;align-items:start}
+  .tl-years{font-size:13px;line-height:1.2}
+  .tl-place{font-size:17px;line-height:1.3}
+  .tl-role{font-size:13px;line-height:1.4}
+  /* photos */
+  .photos{background:transparent;padding:32px 0 8px}
+  .photos-head{display:block}
+  .photos-head h2{font-size:30px;line-height:1.23;max-width:350px}
+  .photos-head .btn-pill{margin-top:24px;font-size:12px;padding:10px 18px}
+  .ph-strip-wrap{margin-top:24px}
+  .ph-strip{gap:10px}
+  .ph-strip img{width:150px;height:190px;border-radius:12px}
+  .ph-nav{display:none}
+  /* dark */
+  .dark{background:#0D0D0D;padding:56px 0 0}
+  .recognition h2{font-size:30px;line-height:1.36}
+  .recognition .sub{font-size:13px;margin-top:10px}
+  .stats{grid-template-columns:1fr;gap:10px;margin:28px 0 0;max-width:none}
+  .stat{padding:24px 16px;border-radius:16px}
+  .stat .num{font-size:24px;line-height:1.36}
+  .stat .lbl{font-size:13px;line-height:1.4;margin-top:4px}
+  /* contact */
+  .dark hr{margin:48px 0 0;border-top-color:#333}
+  .contact{text-align:left;padding:15px 0 0}
+  .contact h2{font-size:34px;line-height:1.24}
+  .contact .sub{margin:14px 0 0;font-size:14px;line-height:22px;max-width:none}
+  .contact .btn-tg{margin-top:14px;font-size:15px;padding:14px 28px}
+  .contact-links{justify-content:flex-start;gap:28px;margin-top:14px;font-size:13px}
+  .footer{padding:38px 0 32px}
+  .footer .container{font-size:11px}
+  .m-only{display:inline}
+  .d-only{display:none}
+}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Привет <span class="accent">)</span></h1>
-    <p>Здесь скоро будет портфолио Саши Попадьина.</p>
-    <p>Пока — <a href="https://t.me/Irrabagon">t.me/Irrabagon</a></p>
+
+<header class="header">
+  <div class="container">
+    <a class="logo" href="#">
+      <div class="role">Дизайн-лид</div>
+      <div class="name">Александр Попадьин</div>
+    </a>
+    <nav class="nav">
+      <a href="#works" class="active">Работы</a>
+      <a href="#about">Обо мне</a>
+      <a href="#photos">Фото</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="burger" aria-label="Открыть меню" onclick="toggleMenu(true)"><span></span><span></span><span></span></button>
   </div>
+</header>
+
+<div class="mmenu" id="mmenu">
+  <div class="container mmenu-head">
+    <a class="logo" href="#" onclick="toggleMenu(false)">
+      <div class="role">Дизайн-лид</div>
+      <div class="name">Александр Попадьин</div>
+    </a>
+    <button class="mclose" aria-label="Закрыть меню" onclick="toggleMenu(false)">✕</button>
+  </div>
+  <nav class="mmenu-nav">
+    <a href="#works" class="active" onclick="toggleMenu(false)">Работы</a>
+    <a href="#about" onclick="toggleMenu(false)">Обо мне</a>
+    <a href="#photos" onclick="toggleMenu(false)">Фото</a>
+    <a href="#contacts" onclick="toggleMenu(false)">Контакты</a>
+  </nav>
+  <div class="mmenu-foot">
+    <a class="btn-tg" href="https://t.me/Irrabagon" target="_blank" rel="noopener">t.me/Irrabagon</a>
+    <div class="mmenu-links">
+      <a href="https://unsplash.com/@irrabagon" target="_blank" rel="noopener">Unsplash</a>
+      <a href="https://www.linkedin.com/in/irrabagon/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:irrabagon@gmail.com">irrabagon@gmail.com</a>
+    </div>
+    <div class="mmenu-city">Калининград · удалённо</div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <h1><span class="accent">Привет, я Саша )</span><br>
+      Занимаюсь дизайном&nbsp;—<br>
+      от айдентики до ИИ-продуктов</h1>
+    </div>
+    <img class="hero-avatar" src="assets/avatar.webp" alt="Саша Попадьин — иллюстрация в стиле Симпсонов" width="431" height="512">
+  </div>
+</section>
+
+<section class="works" id="works">
+  <div class="container">
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-body">
+          <h3>ZavodIT</h3>
+          <p>ИИ-платформа для подбора и найма IT-специалистов: скоринг резюме и транскрибация</p>
+          <a class="card-link" href="case/zavodit.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-zavodit.webp"><img src="assets/cover-zavodit.webp" alt="Интерфейс ZavodIT" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Юзкерн</h3>
+          <p>ИИ-зрение для геологов: распознаёт керн и автоматизирует составление отчётов</p>
+          <a class="card-link" href="case/uzkern.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-uzkern.webp"><img src="assets/cover-uzkern.webp" alt="Логотип Юзкерн" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Бренды Юзтеха</h3>
+          <p>Айдентика для продуктов Юзтеха: USEBUS, UseVision, UseGeo, Юзкерн и других</p>
+          <a class="card-link" href="case/uztech-brands.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-uztech-brands.webp"><img src="assets/cover-uztech-brands.webp" alt="Логотипы брендов Юзтеха" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Единая биометрическая система</h3>
+          <p>Айдентика, дизайн-система и продукты национальной биометрии для Ростелекома</p>
+          <a class="card-link" href="case/ebs.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-ebs.webp"><img src="assets/cover-ebs.webp" alt="Сайт Единой биометрической системы" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Skills Tale</h3>
+          <p>EdTech-платформа для обучения сотрудников софт-скиллам: продукт, бренд и лендинг</p>
+          <a class="card-link" href="case/skills-tale.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-skills-tale.webp"><img src="assets/cover-skills-tale.webp" alt="Логотип Skills Tale" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Yandex Match</h3>
+          <p>Концепт дейтинг-сервиса для Яндекса: анкеты, умный поиск и общение в чате</p>
+          <a class="card-link" href="case/yandex-match.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-yandex-match.webp"><img src="assets/cover-yandex-match.webp" alt="Логотип Я Мэтч" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>GNation</h3>
+          <p>Благотворительная блокчейн-платформа: версии B2C, B2B и мобильное приложение</p>
+          <a class="card-link" href="case/gnation.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-gnation.webp"><img src="assets/cover-gnation.webp" alt="Мобильное приложение GNation" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>PVP.gg</h3>
+          <p>Киберспортивный бренд и турнирная платформа для лиги и зрителей в Mail.ru</p>
+          <a class="card-link" href="case/pvpgg.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-pvpgg.webp"><img src="assets/cover-pvpgg.webp" alt="Бренд PVP.gg" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Use Assist</h3>
+          <p>ИИ-помощник для тестировщиков и code-assistant в виде плагина для VS Code</p>
+          <a class="card-link" href="case/use-assist.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-use-assist.webp"><img src="assets/cover-use-assist.webp" alt="Плагин Use Assist в VS Code" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Flush Draw Poker</h3>
+          <p>iPad-платформа для создания и управления игровыми покерными клубами</p>
+          <a class="card-link" href="case/flush-draw.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-flush-draw.webp"><img src="assets/cover-flush-draw.webp" alt="Покерный стол Flush Draw Poker" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>IPIP</h3>
+          <p>Мобильное приложение с геймифицированной системой аутентификации и наград</p>
+          <a class="card-link" href="case/ipip.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-ipip.webp"><img src="assets/cover-ipip.webp" alt="Приложение IPIP" loading="lazy"></picture></div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Population Zero</h3>
+          <p>Сайт игры, лаунчер и личный кабинет игрока для студии Enplex Games</p>
+          <a class="card-link" href="case/population-zero.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
+        </div>
+        <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-population-zero.webp"><img src="assets/cover-population-zero.webp" alt="Логотип Population Zero" loading="lazy"></picture></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <h2>Обо мне</h2>
+    <div class="about-cols">
+      <div class="about-text">
+        <p>Учился на сценарном факультете ВГИКа — оттуда привычка строить продукты как истории. За 28 лет прошёл путь от полиграфии и айдентики до руководства дизайн-практикой: запускал киберспортивную лигу в Mail.ru, делал айдентику национальной биометрии в Ростелекоме, строил EdTech-платформу в Skills Tale. Сейчас руковожу практикой дизайна в Юзтехе и проектирую ИИ-продукты.</p>
+        <div class="chips">
+          <span class="chip">Продуктовый дизайн</span>
+          <span class="chip">Айдентика</span>
+          <span class="chip">Дизайн-системы</span>
+          <span class="chip">UX-исследования</span>
+          <span class="chip">Геймификация</span>
+          <span class="chip">ИИ-продукты</span>
+          <span class="chip">Арт-дирекшн</span>
+          <span class="chip">Менторинг</span>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-years">2024 — н.в.</div>
+          <div><div class="tl-place">Юзтех</div><div class="tl-role">Руководитель практики дизайна</div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-years">2023 — 2024</div>
+          <div><div class="tl-place">Skills Tale</div><div class="tl-role">Design Lead</div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-years">2020 — 2021</div>
+          <div><div class="tl-place">Ростелеком</div><div class="tl-role">Арт-директор ЕБС</div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-years">2017 — 2018</div>
+          <div><div class="tl-place">Mail.ru</div><div class="tl-role">Продуктовый дизайнер PVP.gg</div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-years">2015 — 2017</div>
+          <div><div class="tl-place">Ростелеком</div><div class="tl-role">Руководитель направления «Игры Ростелеком»</div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-years">2011 — 2015</div>
+          <div><div class="tl-place">Cherry Games</div><div class="tl-role">Арт-директор</div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-years">2008 — 2011</div>
+          <div><div class="tl-place">Игры Mail.ru</div><div class="tl-role">Дизайнер</div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-years">1997 — 2008</div>
+          <div><div class="tl-place">Фриланс</div><div class="tl-role">Дизайнер</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="photos" id="photos">
+  <div class="container">
+    <div class="photos-head">
+      <div>
+        <h2><span class="d-only">Фото</span><span class="m-only">Еще я занимаюсь фотографией</span></h2>
+        <a class="btn-pill m-only" href="https://unsplash.com/@irrabagon" target="_blank" rel="noopener">Мой Unsplash</a>
+      </div>
+      <a class="btn-pill d-only" href="https://unsplash.com/@irrabagon" target="_blank" rel="noopener">Мой Unsplash</a>
+    </div>
+  </div>
+  <div class="container ph-strip-wrap">
+    <div class="ph-strip" id="phStrip">
+      <img src="assets/photo-01-r2d2.webp" alt="Фигурка R2-D2">
+      <img src="assets/photo-02-branch.webp" alt="Бабочка на ветке">
+      <img src="assets/photo-03-poppies.webp" alt="Маковое поле">
+      <img src="assets/photo-04-table.webp" alt="Орхидея и фрукты на столе">
+      <img src="assets/photo-05-sakura.webp" alt="Цветущая ветка">
+      <img src="assets/photo-06-wall-fountain.webp" alt="Фонтан в каменной стене">
+      <img src="assets/photo-07-flowers-water.webp" alt="Цветы на воде">
+      <img src="assets/photo-08-fountain.webp" alt="Старинный фонтан">
+      <img src="assets/photo-09-bokeh.webp" alt="Цветы в сумерках">
+      <img src="assets/photo-10-tulips.webp" alt="Белые тюльпаны">
+      <img src="assets/photo-11-kitten.webp" alt="Котёнок в подарочном пакете">
+      <img src="assets/photo-12-naga.webp" alt="Статуя наги у храма">
+      <img src="assets/photo-13-red-tulips.webp" alt="Красные тюльпаны">
+      <img src="assets/photo-14-siamese.webp" alt="Сиамский кот">
+      <img src="assets/photo-15-tanker.webp" alt="Сухогруз на Босфоре">
+      <img src="assets/photo-16-globe.webp" alt="Старинный глобус">
+      <img src="assets/photo-17-candles.webp" alt="Свечи">
+      <img src="assets/photo-18-vdnh-fountain.webp" alt="Фонтан «Каменный цветок»">
+      <img src="assets/photo-19-green-door.webp" alt="Зелёная дверь с украшением">
+      <img src="assets/photo-20-garland.webp" alt="Гирлянда с лампочками">
+      <img src="assets/photo-21-bulb.webp" alt="Лампочка">
+      <img src="assets/photo-22-sea.webp" alt="Морская рябь">
+      <img src="assets/photo-23-blossoms.webp" alt="Цветущая вишня">
+      <img src="assets/photo-24-buddha.webp" alt="Статуя Будды">
+    </div>
+  </div>
+  <div class="container">
+    <div class="ph-nav">
+      <button type="button" aria-label="Назад" onclick="phScroll(-1)">←</button>
+      <button type="button" aria-label="Вперёд" onclick="phScroll(1)">→</button>
+    </div>
+  </div>
+</section>
+
+<div class="dark" id="contacts">
+  <section class="recognition">
+    <div class="container">
+      <h2>Признание</h2>
+      <p class="sub">Платформы и цифры, за которые не стыдно</p>
+      <div class="stats">
+        <div class="stat"><div class="num">25 000 000</div><div class="lbl">просмотров фото в фотобанках</div></div>
+        <div class="stat"><div class="num">28</div><div class="lbl">лет в дизайне</div></div>
+        <div class="stat"><div class="num">100+</div><div class="lbl">завершенных проектов</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr></div>
+
+  <section class="contact">
+    <div class="container">
+      <h2>Остаемся на связи</h2>
+      <p class="sub">Открыт к коллаборациям, интересным проектам и просто приятному привету</p>
+      <a class="btn-tg" href="https://t.me/Irrabagon" target="_blank" rel="noopener">t.me/Irrabagon</a>
+      <div class="contact-links">
+        <a href="https://unsplash.com/@irrabagon" target="_blank" rel="noopener">Unsplash</a>
+        <a href="https://www.linkedin.com/in/irrabagon/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:irrabagon@gmail.com">irrabagon@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© 2026 Александр Попадьин</span>
+      <span>Калининград · удалённо</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+function phScroll(dir){
+  document.getElementById('phStrip').scrollBy({left:dir*310,behavior:'smooth'});
+}
+// Заголовок hero: ужимаем шрифт, пока самая длинная строка не влезет в колонку.
+// Метрики текста отличаются между движками (Safari шире), фикс — по факту рендера.
+function fitHero(){
+  var h = document.querySelector('.hero-text h1');
+  if(!h) return;
+  h.style.fontSize = '';
+  var fs = parseFloat(getComputedStyle(h).fontSize);
+  var guard = 0;
+  while (h.scrollWidth > h.clientWidth + 1 && fs > 20 && guard < 60){
+    fs -= 0.5;
+    h.style.fontSize = fs + 'px';
+    guard++;
+  }
+}
+function toggleMenu(open){
+  document.getElementById('mmenu').classList.toggle('open', open);
+  document.body.classList.toggle('menu-open', open);
+}
+window.addEventListener('resize', fitHero);
+window.addEventListener('load', fitHero);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHero);
+fitHero();
+</script>
+
 </body>
 </html>
