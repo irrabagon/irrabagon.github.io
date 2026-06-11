@@ -34,28 +34,11 @@ img{display:block;max-width:100%;height:auto}
 a{text-decoration:none;color:inherit}
 .container{max-width:1248px;margin:0 auto;padding:0 24px}
 
-/* ===== Navbar ===== */
-.header{padding:28px 0}
+/* Header — единый блок, синхронизирован с Figma (см. case/zavodit.html) */
+.header{padding:28px 0;background:#fff}
 .header .container{display:flex;justify-content:space-between;align-items:center;gap:24px}
-.logo .role{font-size:12px;font-weight:500;color:var(--grey);line-height:1.33}
+.logo .role{font-size:12px;font-weight:500;color:var(--ink);line-height:1.33}
 .logo .name{font-size:14px;font-weight:800;color:var(--ink);line-height:1.36}
-.nav{display:flex;gap:36px;font-size:15px;font-weight:600}
-.nav a{color:var(--ink);transition:color .2s}
-.nav a:hover,.nav a.active{color:var(--accent)}
-.burger{display:none;flex-direction:column;justify-content:space-between;width:22px;height:16px;background:none;border:none;cursor:pointer;padding:0}
-.burger span{display:block;height:2px;background:var(--ink);border-radius:1px}
-.mmenu{position:fixed;inset:0;background:var(--bg);z-index:50;display:none;flex-direction:column;overflow-y:auto}
-.mmenu.open{display:flex}
-body.menu-open{overflow:hidden}
-.mmenu-head{display:flex;justify-content:space-between;align-items:center;padding-top:14px;width:100%}
-.mclose{background:none;border:none;font-size:24px;line-height:1;color:var(--ink);cursor:pointer;padding:4px}
-.mmenu-nav{display:flex;flex-direction:column;gap:30px;padding:44px 20px 0}
-.mmenu-nav a{font-size:36px;font-weight:800;color:var(--ink);line-height:1.15}
-.mmenu-nav a.active{color:var(--accent)}
-.mmenu-foot{margin-top:auto;padding:40px 20px 28px}
-.mmenu-foot .btn-tg{display:inline-block;background:#1525F5;color:#fff;font-size:15px;font-weight:700;padding:14px 28px;border-radius:999px}
-.mmenu-links{display:flex;gap:28px;margin-top:28px;color:#555;font-size:14px}
-.mmenu-city{margin-top:24px;color:#9A9A9A;font-size:13px}
 
 /* ===== Hero ===== */
 .case-hero{padding-top:64px}
@@ -141,10 +124,8 @@ body.menu-open{overflow:hidden}
 @media (max-width:760px){
   .container{padding:0 20px}
   .header{padding:16px 0}
-  .logo .role{font-size:11px}
+  .logo .role{font-size:11px;color:var(--grey)}
   .logo .name{font-size:14px}
-  .nav{display:none}
-  .burger{display:flex}
 
   .case-hero{padding-top:17px}
   .back-link{font-size:13px}
@@ -195,40 +176,8 @@ body.menu-open{overflow:hidden}
       <div class="role">Дизайн-лид</div>
       <div class="name">Александр Попадьин</div>
     </a>
-    <nav class="nav">
-      <a class="active" href="../index.html#works">Работы</a>
-      <a href="../index.html#about">Обо мне</a>
-      <a href="../index.html#photos">Фото</a>
-      <a href="../index.html#contacts">Контакты</a>
-    </nav>
-    <button class="burger" aria-label="Открыть меню" onclick="toggleMenu(true)"><span></span><span></span><span></span></button>
   </div>
 </header>
-
-<div class="mmenu" id="mmenu">
-  <div class="container mmenu-head">
-    <a class="logo" href="../index.html">
-      <div class="role">Дизайн-лид</div>
-      <div class="name">Александр Попадьин</div>
-    </a>
-    <button class="mclose" aria-label="Закрыть меню" onclick="toggleMenu(false)">✕</button>
-  </div>
-  <nav class="mmenu-nav">
-    <a href="../index.html#works" class="active">Работы</a>
-    <a href="../index.html#about">Обо мне</a>
-    <a href="../index.html#photos">Фото</a>
-    <a href="../index.html#contacts">Контакты</a>
-  </nav>
-  <div class="mmenu-foot">
-    <a class="btn-tg" href="https://t.me/Irrabagon" target="_blank" rel="noopener">t.me/Irrabagon</a>
-    <div class="mmenu-links">
-      <a href="https://unsplash.com/@irrabagon" target="_blank" rel="noopener">Unsplash</a>
-      <a href="https://www.linkedin.com/in/irrabagon/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:irrabagon@gmail.com">irrabagon@gmail.com</a>
-    </div>
-    <div class="mmenu-city">Калининград · удалённо</div>
-  </div>
-</div>
 
 <section class="case-hero">
   <div class="container">
@@ -263,18 +212,18 @@ body.menu-open{overflow:hidden}
     <div class="shots">
       <div class="shots-col">
         <figure class="shot">
-          <figcaption class="cap">Результаты поиска</figcaption>
-          <picture><source media="(max-width:760px)" srcset="../assets/case/zavodit/m-search-results.webp"><img src="../assets/case/zavodit/search-results.webp" alt="Результаты поиска кандидатов" loading="lazy"></picture>
-        </figure>
-      </div>
-      <div class="shots-col">
-        <figure class="shot">
           <figcaption class="cap">Скоринг-лист и оценка</figcaption>
           <picture><source media="(max-width:760px)" srcset="../assets/case/zavodit/m-scoring-list.webp"><img src="../assets/case/zavodit/scoring-list.webp" alt="Скоринг-лист и оценка кандидатов" loading="lazy"></picture>
         </figure>
         <figure class="shot">
           <figcaption class="cap">Карточка скоринга</figcaption>
           <picture><source media="(max-width:760px)" srcset="../assets/case/zavodit/m-scoring-card.webp"><img src="../assets/case/zavodit/scoring-card.webp" alt="Карточка скоринга кандидата" loading="lazy"></picture>
+        </figure>
+      </div>
+      <div class="shots-col">
+        <figure class="shot">
+          <figcaption class="cap">Результаты поиска</figcaption>
+          <picture><source media="(max-width:760px)" srcset="../assets/case/zavodit/m-search-results.webp"><img src="../assets/case/zavodit/search-results.webp" alt="Результаты поиска кандидатов" loading="lazy"></picture>
         </figure>
       </div>
     </div>
@@ -375,11 +324,5 @@ body.menu-open{overflow:hidden}
   </div>
 </footer>
 
-<script>
-function toggleMenu(open){
-  document.getElementById('mmenu').classList.toggle('open', open);
-  document.body.classList.toggle('menu-open', open);
-}
-</script>
 </body>
 </html>
