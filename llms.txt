@@ -1,0 +1,21 @@
+# Александр Попадьин — дизайн-лид
+
+> Портфолио дизайн-лида Александра Попадьина (Alexandr Popadin): продуктовый дизайн,
+> айдентика, дизайн-системы и ИИ-продукты. 28 лет в дизайне, 100+ завершённых проектов.
+> Сейчас — руководитель практики дизайна в Юзтехе. Калининград, работает удалённо.
+> Контакты: t.me/Irrabagon, irrabagon@gmail.com. Фотография: 25 млн просмотров в фотобанках.
+
+## Кейсы
+
+- [ZavodIT](https://irrabagon.ru/case/zavodit.html): ИИ-платформа для подбора и найма IT-специалистов
+- [Юзкерн](https://irrabagon.ru/case/uzkern.html): ИИ-зрение для геологов — распознавание керна
+- [Бренды Юзтеха](https://irrabagon.ru/case/uztech-brands.html): айдентика продуктов Юзтеха
+- [Единая биометрическая система](https://irrabagon.ru/case/ebs.html): айдентика и дизайн-система национальной биометрии (Ростелеком)
+- [Skills Tale](https://irrabagon.ru/case/skills-tale.html): EdTech-платформа обучения софт-скиллам
+- [Yandex Match](https://irrabagon.ru/case/yandex-match.html): концепт дейтинг-сервиса
+- [GNation](https://irrabagon.ru/case/gnation.html): благотворительная блокчейн-платформа
+- [PVP.gg](https://irrabagon.ru/case/pvpgg.html): киберспортивный бренд и турнирная платформа (Mail.ru)
+- [Use Assist](https://irrabagon.ru/case/use-assist.html): ИИ-помощник для тестировщиков
+- [Flush Draw Poker](https://irrabagon.ru/case/flush-draw.html): iPad-платформа покерных клубов
+- [IPIP](https://irrabagon.ru/case/ipip.html): мобильное приложение с геймифицированной аутентификацией
+- [Population Zero](https://irrabagon.ru/case/population-zero.html): сайт игры, лаунчер и кабинет игрока (Enplex Games)
