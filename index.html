@@ -87,12 +87,9 @@ a{text-decoration:none;color:inherit}
 .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
 .card-body{padding:48px 48px 0}
 .card-body h3{font-size:28px;font-weight:800;color:#1A1A1A;letter-spacing:-0.01em;line-height:1.36}
-.card-body p{margin-top:12px;font-size:16px;line-height:23px;color:var(--ink-soft);max-width:460px}
-.card-link{display:inline-block;margin:20px 0 41px;font-weight:600;color:var(--link)}
-.card-link .arr{display:inline-block;transition:transform .2s}
-.card:hover .card-link .arr{transform:translateX(4px)}
+.card-body p{margin:12px 0 41px;font-size:16px;line-height:23px;color:var(--ink-soft);max-width:460px}
 .card-cover{margin:auto 0 0 14.966%;border-radius:12px 0 0 0;box-shadow:0 12px 32px rgba(0,0,0,.18)}
-.card-cover img{width:100%;max-width:100%;height:auto;border-radius:inherit}
+.card-cover img{width:100%;max-width:100%;height:auto;border-radius:12px 0 0 0}
 
 /* About */
 .about{padding:110px 0 128px}
@@ -223,8 +220,9 @@ a{text-decoration:none;color:inherit}
   .card-body{padding:24px 24px 0}
   .card-body h3{font-size:22px;line-height:1.23}
   .card-body p{margin-top:8px;font-size:14px;line-height:19px}
-  .card-link{font-size:15px;line-height:1.2;margin:8px 0 0}
-  .card-cover{margin:22px 24px 20px;border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.18)}
+  .card-body p{margin-bottom:0}
+  .card-cover{margin:22px 24px 20px;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.18)}
+  .card-cover img{border-radius:12px}
   /* about */
   .about{padding:48px 0 16px}
   .about h2{font-size:34px;line-height:1.2}
@@ -294,113 +292,101 @@ a{text-decoration:none;color:inherit}
   <div class="container">
     <div class="grid">
 
-      <article class="card">
+      <a class="card" href="case/zavodit.html">
         <div class="card-body">
           <h3>ZavodIT</h3>
           <p>ИИ-платформа для подбора и найма IT-специалистов: скоринг резюме и транскрибация</p>
-          <a class="card-link" href="case/zavodit.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-zavodit.webp"><img src="assets/cover-zavodit.webp" alt="Интерфейс ZavodIT" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/uzkern.html">
         <div class="card-body">
           <h3>Юзкерн</h3>
           <p>ИИ-зрение для геологов: распознаёт керн и автоматизирует составление отчётов</p>
-          <a class="card-link" href="case/uzkern.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-uzkern.webp"><img src="assets/cover-uzkern.webp" alt="Логотип Юзкерн" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/uztech-brands.html">
         <div class="card-body">
           <h3>Бренды Юзтеха</h3>
           <p>Айдентика для продуктов Юзтеха: USEBUS, UseVision, UseGeo, Юзкерн и других</p>
-          <a class="card-link" href="case/uztech-brands.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-uztech-brands.webp"><img src="assets/cover-uztech-brands.webp" alt="Логотипы брендов Юзтеха" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/ebs.html">
         <div class="card-body">
           <h3>Единая биометрическая система</h3>
           <p>Айдентика, дизайн-система и продукты национальной биометрии для Ростелекома</p>
-          <a class="card-link" href="case/ebs.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-ebs.webp"><img src="assets/cover-ebs.webp" alt="Сайт Единой биометрической системы" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/skills-tale.html">
         <div class="card-body">
           <h3>Skills Tale</h3>
           <p>EdTech-платформа для обучения сотрудников софт-скиллам: продукт, бренд и лендинг</p>
-          <a class="card-link" href="case/skills-tale.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-skills-tale.webp"><img src="assets/cover-skills-tale.webp" alt="Логотип Skills Tale" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/yandex-match.html">
         <div class="card-body">
           <h3>Yandex Match</h3>
           <p>Концепт дейтинг-сервиса для Яндекса: анкеты, умный поиск и общение в чате</p>
-          <a class="card-link" href="case/yandex-match.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-yandex-match.webp"><img src="assets/cover-yandex-match.webp" alt="Логотип Я Мэтч" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/gnation.html">
         <div class="card-body">
           <h3>GNation</h3>
           <p>Благотворительная блокчейн-платформа: версии B2C, B2B и мобильное приложение</p>
-          <a class="card-link" href="case/gnation.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-gnation.webp"><img src="assets/cover-gnation.webp" alt="Мобильное приложение GNation" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/pvpgg.html">
         <div class="card-body">
           <h3>PVP.gg</h3>
           <p>Киберспортивный бренд и турнирная платформа для лиги и зрителей в Mail.ru</p>
-          <a class="card-link" href="case/pvpgg.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-pvpgg.webp"><img src="assets/cover-pvpgg.webp" alt="Бренд PVP.gg" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/use-assist.html">
         <div class="card-body">
           <h3>Use Assist</h3>
           <p>ИИ-помощник для тестировщиков и code-assistant в виде плагина для VS Code</p>
-          <a class="card-link" href="case/use-assist.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-use-assist.webp"><img src="assets/cover-use-assist.webp" alt="Плагин Use Assist в VS Code" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/flush-draw.html">
         <div class="card-body">
           <h3>Flush Draw Poker</h3>
           <p>iPad-платформа для создания и управления игровыми покерными клубами</p>
-          <a class="card-link" href="case/flush-draw.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-flush-draw.webp"><img src="assets/cover-flush-draw.webp" alt="Покерный стол Flush Draw Poker" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/ipip.html">
         <div class="card-body">
           <h3>IPIP</h3>
           <p>Мобильное приложение с геймифицированной системой аутентификации и наград</p>
-          <a class="card-link" href="case/ipip.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-ipip.webp"><img src="assets/cover-ipip.webp" alt="Приложение IPIP" loading="lazy"></picture></div>
-      </article>
+      </a>
 
-      <article class="card">
+      <a class="card" href="case/population-zero.html">
         <div class="card-body">
           <h3>Population Zero</h3>
           <p>Сайт игры, лаунчер и личный кабинет игрока для студии Enplex Games</p>
-          <a class="card-link" href="case/population-zero.html">Смотреть кейс&nbsp; <span class="arr">→</span></a>
         </div>
         <div class="card-cover"><picture><source media="(max-width:900px)" srcset="assets/m-cover-population-zero.webp"><img src="assets/cover-population-zero.webp" alt="Логотип Population Zero" loading="lazy"></picture></div>
-      </article>
+      </a>
 
     </div>
   </div>
