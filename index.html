@@ -75,28 +75,12 @@ a{text-decoration:none;color:inherit}
 .hero-text h1 .accent{color:var(--accent)}
 .hero-avatar{
   display:block;
-  position:relative;
   width:100%;
   max-width:431px;
   height:auto;
   margin:30px 0 -2px auto;
   transform:translateX(-16px);
   justify-self:end;
-  line-height:0;
-  animation:avaIn .8s cubic-bezier(.22,1.2,.36,1) both;
-}
-.hero-avatar img{display:block;width:100%;height:auto}
-.ava-arm{position:absolute;left:0;top:0;width:100%;transform-origin:30.7% 83.5%;will-change:transform;animation:avaWave 1.5s ease-in-out .8s 1}
-.hero-avatar:hover .ava-arm{animation:avaWave 1.3s ease-in-out .1s infinite}
-.ava-lid{position:absolute;background:#FECE01;border-bottom:5px solid #0E0E0E;border-radius:50%;transform:scaleY(0);transform-origin:50% 10%;transition:transform .09s ease-in;pointer-events:none}
-.ava-lid-l{left:31.4%;top:27.3%;width:15%;height:10.8%}
-.ava-lid-r{left:48.2%;top:27.4%;width:19.2%;height:11.6%}
-.blink .ava-lid{transform:scaleY(1)}
-@keyframes avaIn{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:translateX(-16px)}}
-@keyframes avaWave{0%,100%{transform:rotate(0)}30%{transform:rotate(-9deg)}55%{transform:rotate(4deg)}78%{transform:rotate(-6deg)}}
-@media (prefers-reduced-motion: reduce){
-  .hero-avatar,.ava-arm{animation:none!important}
-  .ava-lid{display:none}
 }
 @media (max-width:1250px) and (min-width:901px){
   .hero .container{grid-template-columns:minmax(0,1fr) 35vw}
@@ -246,7 +230,7 @@ a{text-decoration:none;color:inherit}
   .hero .container{grid-template-columns:minmax(0,1fr)}
   .hero-text{padding:32px 0 0}
   .hero-text h1{font-size:29px;line-height:1.15;white-space:normal;letter-spacing:-0.02em}
-  .hero-avatar{width:195px;max-width:60%;justify-self:center;margin:8px 0 -2px;transform:none;animation:none}
+  .hero-avatar{width:195px;max-width:60%;justify-self:center;margin:8px 0 -2px;transform:none}
   /* cards */
   .grid{grid-template-columns:minmax(0,1fr);gap:16px}
   .card-body{padding:24px 24px 0}
@@ -316,12 +300,7 @@ a{text-decoration:none;color:inherit}
       Занимаюсь дизайном&nbsp;—<br>
       от айдентики до ИИ-продуктов</h1>
     </div>
-    <div class="hero-avatar" id="avatar">
-      <img src="assets/avatar-body.webp" alt="Саша Попадьин — иллюстрация в стиле Симпсонов" width="431" height="512">
-      <img class="ava-arm" src="assets/avatar-arm.webp" alt="" aria-hidden="true" width="431" height="512">
-      <span class="ava-lid ava-lid-l" aria-hidden="true"></span>
-      <span class="ava-lid ava-lid-r" aria-hidden="true"></span>
-    </div>
+    <img class="hero-avatar" src="assets/avatar.webp" alt="Саша Попадьин — иллюстрация в стиле Симпсонов" width="431" height="512">
   </div>
 </section>
 
@@ -584,16 +563,6 @@ function fitHero(){
     guard++;
   }
 }
-(function(){
-  var av=document.getElementById('avatar');
-  if(!av || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  (function blink(){
-    setTimeout(function(){
-      av.classList.add('blink');
-      setTimeout(function(){ av.classList.remove('blink'); blink(); },130);
-    }, 2600+Math.random()*3500);
-  })();
-})();
 window.addEventListener('resize', fitHero);
 window.addEventListener('load', fitHero);
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHero);
