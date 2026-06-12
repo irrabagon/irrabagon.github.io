@@ -103,7 +103,15 @@ a{text-decoration:none;color:inherit}
 
 .m-only{display:none}
 @media (max-width:760px){.m-only{display:inline}.d-only{display:none}}
-
+.shots.phones{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+@media (max-width:760px){.shots.phones{grid-template-columns:1fr 1fr;gap:10px}}
+.shots.grid2{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+@media (max-width:760px){.shots.grid2{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}}
+.shots.phones3{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:760px){.shots.phones3{grid-template-columns:1fr 1fr;gap:10px}}
+.next .next-label{font-size:17px;font-weight:500;color:var(--grey-soft);margin-bottom:10px}
+@media (max-width:760px){.next .next-label{font-size:14px;margin-bottom:6px}}
+@media (min-width:761px){.cover{margin-top:49px}.case-hero + .case-section{margin-top:72px}}
 /* ===== Footer ===== */
 .footer{background:var(--dark);color:#fff}
 .footer .container{border-top:1px solid #333333;padding-top:29px;padding-bottom:71px}
@@ -169,7 +177,6 @@ a{text-decoration:none;color:inherit}
   .socials{gap:24px;margin-top:27px;font-size:13px}
   .footer-bottom{margin-top:36px;font-size:11px}
 }
-@media (min-width:761px){.cover{margin-top:49px}.case-hero + .case-section{margin-top:72px}}
 </style>
 </head>
 <body>
@@ -219,14 +226,6 @@ a{text-decoration:none;color:inherit}
 <figure class="shot"><picture><source media="(max-width:760px)" srcset="../assets/case/skills-tale/m-brand-2.webp"><img src="../assets/case/skills-tale/brand-2.webp" alt="Бренд — применение 2" loading="lazy"></picture></figure>
 <figure class="shot"><picture><source media="(max-width:760px)" srcset="../assets/case/skills-tale/m-brand-3.webp"><img src="../assets/case/skills-tale/brand-3.webp" alt="Бренд — применение 3" loading="lazy"></picture></figure>
 <figure class="shot"><picture><source media="(max-width:760px)" srcset="../assets/case/skills-tale/m-brand-4.webp"><img src="../assets/case/skills-tale/brand-4.webp" alt="Бренд — применение 4" loading="lazy"></picture></figure></div>
-  </div>
-</section>
-
-<section class="case-section">
-  <div class="container">
-    <h2>Лендинг</h2>
-    <p class="descr">Длинная история продукта — целиком, в двух колонках.</p>
-    <div class="shots plain"><figure class="shot" style="grid-column:1/-1"><picture><source media="(max-width:760px)" srcset="../assets/case/skills-tale/m-landing.webp"><img src="../assets/case/skills-tale/landing.webp" alt="Лендинг Skills Tale" loading="lazy"></picture></figure></div>
   </div>
 </section>
 
