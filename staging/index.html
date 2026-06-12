@@ -90,12 +90,13 @@ a{text-decoration:none;color:inherit}
 .ava-arm{position:absolute;left:0;top:0;width:100%;height:auto;aspect-ratio:431/512;transform-origin:30.7% 83.5%;will-change:transform}
 .hero-avatar.ready .ava-arm{animation:avaWave 1.5s ease-in-out .3s 1}
 .hero-avatar.ready:hover .ava-arm{animation:avaWave 1.3s ease-in-out .1s infinite}
+.ava-pivot{position:absolute;left:13.9%;top:70.3%;width:34.8%;height:auto;pointer-events:none}
 .ava-lid{position:absolute;background:#FECE01;border-bottom:5px solid #0E0E0E;border-radius:50%;transform:scaleY(0);transform-origin:50% 10%;transition:transform .09s ease-in;pointer-events:none}
 .ava-lid-l{left:31.4%;top:27.3%;width:15%;height:10.8%}
 .ava-lid-r{left:48.2%;top:27.4%;width:19.2%;height:11.6%}
 .blink .ava-lid{transform:scaleY(1)}
 @keyframes avaIn{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:translateX(-16px)}}
-@keyframes avaWave{0%,100%{transform:rotate(0)}30%{transform:rotate(-9deg)}55%{transform:rotate(4deg)}78%{transform:rotate(-6deg)}}
+@keyframes avaWave{0%,100%{transform:rotate(0)}30%{transform:rotate(-7deg)}55%{transform:rotate(2.5deg)}78%{transform:rotate(-4.5deg)}}
 @media (prefers-reduced-motion: reduce){
   .hero-avatar,.ava-arm{animation:none!important}
   .ava-lid{display:none}
@@ -320,6 +321,7 @@ a{text-decoration:none;color:inherit}
     <div class="hero-avatar" id="avatar">
       <img src="assets/avatar-body.webp" alt="Саша Попадьин — иллюстрация в стиле Симпсонов" width="431" height="512">
       <img class="ava-arm" src="assets/avatar-arm.webp" alt="" aria-hidden="true" width="431" height="512">
+      <img class="ava-pivot" src="assets/avatar-pivot.webp" alt="" aria-hidden="true">
       <span class="ava-lid ava-lid-l" aria-hidden="true"></span>
       <span class="ava-lid ava-lid-r" aria-hidden="true"></span>
     </div>
